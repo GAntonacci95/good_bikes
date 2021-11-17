@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3AC6956B-B7F5-4997-80CB-38E0F77B7982}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Model</RootNamespace>
+    <AssemblyName>Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Agevolazioni\Agevolazione.cs" />
+    <Compile Include="Agevolazioni\AgevolazioneFissa.cs" />
+    <Compile Include="Agevolazioni\AgevolazioneFissaNormale.cs" />
+    <Compile Include="Agevolazioni\AgevolazioneFissaEccezionale.cs" />
+    <Compile Include="Agevolazioni\AgevolazioneScontataNormale.cs" />
+    <Compile Include="Agevolazioni\AgevolazioneScontataEccezionale.cs" />
+    <Compile Include="Agevolazioni\AgevolazioneScontata.cs" />
+    <Compile Include="Agevolazioni\FactoryFasceOrarie.cs" />
+    <Compile Include="Agevolazioni\FasciaOraria.cs" />
+    <Compile Include="Agevolazioni\GiorniValidita.cs" />
+    <Compile Include="Agevolazioni\IAgevolazioneNormale.cs" />
+    <Compile Include="Agevolazioni\IAgevolazioneEccezionale.cs" />
+    <Compile Include="Agevolazioni\IFasciaOraria.cs" />
+    <Compile Include="Agevolazioni\IValiditaAgevolazioneNormale.cs" />
+    <Compile Include="Agevolazioni\Percentuale.cs" />
+    <Compile Include="Agevolazioni\ValiditaAgevolazioneNormale.cs" />
+    <Compile Include="ChangedEventArgs.cs" />
+    <Compile Include="Elementi\Disattivato.cs" />
+    <Compile Include="StatoInizialeNegozio.cs" />
+    <Compile Include="Noleggi\ElementoNoleggio.cs" />
+    <Compile Include="Noleggi\SostituzioneConcreta.cs" />
+    <Compile Include="Noleggi\Sostituzione.cs" />
+    <Compile Include="TipoEvento.cs" />
+    <Compile Include="EditableAttribute.cs" />
+    <Compile Include="Elementi\Bicicletta.cs" />
+    <Compile Include="Elementi\Casco.cs" />
+    <Compile Include="Elementi\CategorieAdapter.cs" />
+    <Compile Include="Elementi\Elemento.cs" />
+    <Compile Include="Elementi\FactoryStatiElemento.cs" />
+    <Compile Include="Elementi\StatoElemento.cs" />
+    <Compile Include="Elementi\InRiparazione.cs" />
+    <Compile Include="Elementi\Noleggiabile.cs" />
+    <Compile Include="Elementi\StatoTipoElemento.cs" />
+    <Compile Include="Elementi\TipoBicicletta.cs" />
+    <Compile Include="Elementi\TipoCasco.cs" />
+    <Compile Include="Elementi\TipoElemento.cs" />
+    <Compile Include="Noleggi\ElementoNoleggioConcreto.cs" />
+    <Compile Include="Noleggi\Noleggio.cs" />
+    <Compile Include="Negozio.cs" />
+    <Compile Include="Noleggi\NoleggioConcreto.cs" />
+    <Compile Include="Persone\Amministratore.cs" />
+    <Compile Include="Persone\Cliente.cs" />
+    <Compile Include="Persone\ClientePersona.cs" />
+    <Compile Include="Persone\Dipendente.cs" />
+    <Compile Include="Persone\IDipendente.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\System2\System2.csproj">
+      <Project>{59f5ab66-5387-4be3-a007-6cd14ace680e}</Project>
+      <Name>System2</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

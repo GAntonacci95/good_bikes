@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1CC28F25-1F13-485D-AC1C-97C40BBEBBFA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>View</RootNamespace>
+    <AssemblyName>View</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutoDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EditingControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EditingControl.Designer.cs">
+      <DependentUpon>EditingControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditingDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditingDialog.Designer.cs">
+      <DependentUpon>EditingDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridViewForms\FilterPanels\ElementoNoleggioUpperPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridViewForms\FilterPanels\ElementoNoleggioUpperPanel.Designer.cs">
+      <DependentUpon>ElementoNoleggioUpperPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridViewForms\FilterPanels\ElementoUpperPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridViewForms\FilterPanels\ElementoUpperPanel.Designer.cs">
+      <DependentUpon>ElementoUpperPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridViewForms\FilterPanels\UpperPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridViewForms\ChooseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GridViewForms\ChooseForm.Designer.cs">
+      <DependentUpon>ChooseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GridViewForm.Designer.cs">
+      <DependentUpon>GridViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridViewForms\NoleggioForms\NoleggioFormEditOrView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GridViewForms\NoleggioForms\NoleggioFormEditOrView.Designer.cs">
+      <DependentUpon>NoleggioFormEditOrView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IGridViewForm.cs" />
+    <Compile Include="GridViewForms\ListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GridViewForms\ListForm.Designer.cs">
+      <DependentUpon>ListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IShared.cs" />
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridViewForms\NoleggioForms\ElementiNoleggioChooseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GridViewForms\NoleggioForms\NoleggioFormCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GridViewForms\NoleggioForms\NoleggioFormCreate.Designer.cs">
+      <DependentUpon>NoleggioFormCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Shared.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SpecialComponent.cs" />
+    <Compile Include="TabGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TabGrid.Designer.cs">
+      <DependentUpon>TabGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WatermarkTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="EditingControl.resx">
+      <DependentUpon>EditingControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditingDialog.resx">
+      <DependentUpon>EditingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridViewForms\FilterPanels\ElementoNoleggioUpperPanel.resx">
+      <DependentUpon>ElementoNoleggioUpperPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridViewForms\FilterPanels\ElementoUpperPanel.resx">
+      <DependentUpon>ElementoUpperPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridViewForms\FilterPanels\UpperPanel.resx">
+      <DependentUpon>UpperPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridViewForms\ChooseForm.resx">
+      <DependentUpon>ChooseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridViewForm.resx">
+      <DependentUpon>GridViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridViewForms\ListForm.resx">
+      <DependentUpon>ListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridViewForms\NoleggioForms\NoleggioFormEditOrView.resx">
+      <DependentUpon>NoleggioFormEditOrView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridViewForms\NoleggioForms\NoleggioFormCreate.resx">
+      <DependentUpon>NoleggioFormCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabGrid.resx">
+      <DependentUpon>TabGrid.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\System2\System2.csproj">
+      <Project>{59f5ab66-5387-4be3-a007-6cd14ace680e}</Project>
+      <Name>System2</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
